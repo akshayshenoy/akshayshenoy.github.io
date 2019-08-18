@@ -1,513 +1,414 @@
-<!DOCTYPE html><html lang='en' class=''>
-<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /><link rel="canonical" href="https://codepen.io/iPawan/pen/PwNbyv" />
-<style class="cp-pen-styles">
-* { margin: 0; padding: 0; }
 
-body { 
-  background: #f2f2f2; 
-  font-size: 62.5%; 
-  padding: 10px; 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script>
+<script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script>
+<meta charset='UTF-8'><meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+    body{
+  background-color: #212121;
+  color: #e2e2e2;
+  font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  /*letter-spacing: 0.02em;*/
+  margin:0px;
+  padding:0px;
+}
+.container{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.left-col{
+  display:flex;
+  flex-direction: column;
+  padding-left: 5%;
+  flex: 1 0 0;
 }
 
-.myResume-Contact-Info h1 { 
-  font-family: "Times New Roman", "Trebuchet MS", Arial, sans-serif; 
-  margin-bottom: 20px;
-  font-size: 40px; 
+.right-col{
+  display:flex;
+  flex-direction: column;
+  padding-left :3%;
+  flex: 2 0 0;
+  background-color: #F0F0F0;
+  color:#212121;
 }
-
-.myResume-Contact-Info > h3 { 
-  font-family: "Times New Roman", "Trebuchet MS", Arial, sans-serif; 
-  color: #484848; 
-  margin-bottom: 10px; 
-  text-decoration: underline; 
-}
-
-.myResume-Contact-Info > h6 { 
-  font-family: "Times New Roman", Verdana, Arial, sans-serif; 
-  color: #777; 
-  font-weight: normal; 
-  font-size: 1em; 
-}
-
-.myResume{
-  background: #fff; 
-  width:80%;
-  font-family: "Balthazar", "Droid Serif", serif; 
-  color: #565656; 
-  font-size: 1.8em; 
-  line-height: 1.4em; 
-  margin: 3% auto; 
-  padding: 10px 0px 35px 80px; 
-  //padding: 35px;
-    text-shadow: 1px 1px 10px #CCC;
-}
-
-.myResume-Contact-Info{
-  width:50%;
-  margin-top: 50px; 
-  margin-bottom: 30px;
-  margin-right:100px;
-  float:left;
-}
-
-.clear{
-  clear:both;
-}
-
-.myResume-Profile-Pic{
-  width:100%;
-  margin:40px auto;
-}
-
-.myResume-Profile-Pic img{
-  width:25%;
-  height:auto;  
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 5px;
-}
-
-.myResume-Profile-Intro{
-  width:88.5%;
-  margin:10 px auto;
-  text-align:justify;
-  margin-top:50px;
-}
-
-.myResume-Skills{
-  width:88.5%;
-  margin:10 px auto;
-  text-align:justify;
-  margin-top:50px;
-}
-
-.myResume-Education{ 
-  width:88.5%;
-  margin-top:50px;
-}
-
-.myResume-Education > ul > li {
-  list-style-type: circle; 
-}
-
-.myResume-Experience{
-  width:88.5%;
-  margin-top:50px;
-}
-
-h1.title{
+.name h1{
+  text-align: center;
   text-transform: uppercase;
-  font-size: 150%;
-  background-color:#CCC;
-  padding:10px 0px 10px 100px;
-  border-radius:0px 50px 50px 0px;
-  width:80%;
-  margin-bottom:10px;
-  color:#fff;
-  text-shadow: 2px 2px 8px #000;
-  position:relative;
-  left:-85px;
+  color: RGB(59,166,216);
 }
 
-.myResume-Skills-left { 
-  display: block; 
-  float: left; 
-  padding-bottom:20px;
-   margin-left:30px;
+.name h1 span:first-child{
+  /*padding-left:0.3em;*/
+  letter-spacing: 0.2em;
+  font-weight: normal;
 }
 
-.myResume-Skills-right { 
-  display: block; 
-  float: left;
-  margin-left:30px;
+.photo {
+  margin: 20px 0;
+  align-self: center;
+  width: 50%;
 }
 
-ul.myResume-Skills-left,ul.myResume-Skills-right { 
-  display: block; 
-}
-ul.myResume-Skills-left > li { 
-  padding-left: 10px; 
-  list-style-type: circle; 
-  vertical-align: top; 
-  font-family: "Balthazar", "Droid Serif", serif; 
-}
-ul.myResume-Skills-right > li { 
-  padding-left: 10px; 
-  list-style-type: circle; 
-  vertical-align: top; 
-  font-family: "Balthazar", "Droid Serif", serif; 
-}
-ul.myResume-Skills-left > li:first-child {
-  list-style-type: none;  
-  font-weight:bolder;
-  font-size:20px;
-  text-decoration:underline;
-}
-ul.myResume-Skills-right > li:first-child { 
-  list-style-type: none;  
-  font-weight:bolder; 
-  font-size:20px;
-  text-decoration:underline;
+.photo img{
+  border: 2px solid RGB(166, 170, 169);
+  overflow: hidde;
+  width: 100%;
+  height: auto;
 }
 
-@media only screen and (max-width: 740px) {
-.myResume{
+h2{
+  text-transform: uppercase;
+  width: 90%;
+  font-size:1.8em;
+  color:RGB(59, 166, 216);
+  border-bottom: 2px solid RGB(166, 170, 169);
+}
+
+ul{
+  margin-bottom: 0px;
+  list-style:none;
+  /*border: 1px solid white;*/
+  padding-left:2%;
+}
+ul li{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
   width:90%;
-  font-family: "Balthazar", "Droid Serif", serif; 
-  color: #565656; 
-  padding: 10px;
-  }
-  .myResume-Contact-Info h1{
-    font-size:30px;
-    padding-left:10%;
-  }
-  .myResume-Contact-Info > h3 { 
-   font-size:14px;
-   padding-left:10%;
 }
-.myResume-Contact-Info > h6 { 
-  font-size:13px;
-  padding-left:10%;
+ul li i{
+  margin-right: 10px;
+  width:20px;
+  color: RGB(59, 166, 216);
+  font-size: 1.3em;
 }
-  .myResume-Contact-Info {
- width:40%;
-    text-align:center;
-  }
-  .myResume-Profile-Pic{
+ul li p{
+  margin-top: 0px;
+}
+ul li p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bar{
+  
+  margin: 0px;
+  margin-left: auto;
+  border: 2px solid  RGB(59, 166, 216);
+  border-radius:8px;
+  width: 60%;
+  height: 15px;
+  overflow: hidde;
+}
+
+.slider{
   width:60%;
-  margin-right:5%;
-    
-}
-.myResume-Profile-Pic img{
-  width:45%; 
-  float:right;  
-}
-  
-h1.title{
-  font-size: 25px;
-  background-color:#CCC;
-  padding:5px 0px 5px 0px;
-  border-radius:0px;
-  width:100%;
-  margin-bottom:10px;
-  position:relative;
-  left:-35px;
-  text-align:center;  
-}
-.myResume-Profile-Intro{
-  width:90%;  
-  text-align:justify;
-  font-size: 20px;
-  padding-left:18px;  
-}
-.myResume-Skills{
-  width:90%;
-  font-size: 15px;
-  padding-left:18px;      
-}
-.myResume-Education{ 
-  width:90%;
-  font-size: 18px;
-  padding-left:18px;          
-}  	
+  height:74%;
+  background-color: RGB(166,170,169);
+  border: 2px solid  rgba(0,0,0,0);
+  background-clip: padding-box;
+  border-radius: 6px;
 }
 
-@media only screen and (max-width: 570px) {
-  .myResume{
-  width:90%;
-  font-family: "Balthazar", "Droid Serif", serif; 
-  color: #565656; 
-  padding: 10px;
-  }
-  .myResume-Contact-Info h1{
-    font-size:60px;
-    padding-left:10%;
-  }
-  .myResume-Contact-Info > h3 { 
-   font-size:18px;
-   padding-left:10%;
-}
-.myResume-Contact-Info > h6 { 
-  font-size:15px;
-  padding-left:10%;
-}
-  .myResume-Contact-Info {
- width:90%;
-    font-size:60%;
-    text-align:center;
-  }
-  .myResume-Profile-Pic{
-  width:90%;
-  margin:auto 6%;
-}
-.myResume-Profile-Pic img{
-  width:70%;
-  margin:auto 15%;  
-}
+.education{
   
-h1.title{
-  font-size: 25px;
-  background-color:#CCC;
-  padding:5px 0px 5px 0px;
-  border-radius:0px;
-  width:100%;
-  margin-bottom:10px;
-  position:relative;
-  left:-35px;
-  text-align:center;  
-}
-.myResume-Profile-Intro{
-  width:90%;  
-  text-align:justify;
-  font-size: 20px;
-  padding-left:18px;  
-}
-.myResume-Skills{
-  width:90%;
-  font-size: 15px;
-  padding-left:18px;      
-}
-.myResume-Education{ 
-  width:90%;
-  font-size: 18px;
-  padding-left:18px;          
-}  	
-}
-
-@media only screen and (max-width: 480px) {
-  .myResume{
-  width:90%;
-  font-family: "Balthazar", "Droid Serif", serif; 
-  color: #565656; 
-  padding: 10px;
-  }
-  .myResume-Contact-Info h1{
-    font-size:40px;
-    padding-left:10%;
-  }
-  .myResume-Contact-Info > h3 { 
-   font-size:13px;
-   padding-left:10%;
-}
-.myResume-Contact-Info > h6 { 
-  font-size:13px;
-  padding-left:10%;
-}
-  .myResume-Contact-Info {
- width:90%;
-    font-size:60%;
-    text-align:center;
-  }
-  .myResume-Profile-Pic{
-  width:90%;
-}
-.myResume-Profile-Pic img{
-  width:80%;
-  margin:auto 10%;  
-}
-  
-h1.title{
-  font-size: 25px;
-  background-color:#CCC;
-  padding:5px 0px 5px 0px;
-  border-radius:10px;
-  width:122.0%;
-  margin-bottom:10px;
-  position:relative;
-  left:-32px;
-  text-align:center;  
-}
-.myResume-Profile-Intro{
-  width:90%;  
-  text-align:justify;
-  font-size: 20px;
-  padding-left:18px;  
-}
-.myResume-Skills{
-  width:90%;
-  font-size: 18px;
-  padding-left:18px;      
-}
-  
-  
-.myResume-Education{ 
-  width:90%;
-  font-size: 18px;
-  padding-left:18px;          
 }  
-  
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  width: 93%;
+}
+.header i{
+  margin-top:10px;
+  margin-right: 10px;
+  color: RGB(59, 166, 216);
 }
 
-@media only screen and (max-width: 320px) {
-  .myResume{
-  background: #fff; 
-  width:80%;
-  font-family: "Balthazar", "Droid Serif", serif; 
-  color: #565656; 
-  margin: auto; 
-  padding: 0px 10px 10px 45px;
-  }
-  .myResume-Contact-Info h1{
-    font-size:30px;
-  }
-  .myResume-Contact-Info > h3 { 
-   font-size:12px;
+p.bold{
+  font-size:1.4em;
+  margin-bottom:0px;
+  font-weight: 500;
 }
-.myResume-Contact-Info > h6 { 
-  font-size:12px;
+p.date{
+  margin-top: 5px;
+  font-size:1.2em;
+  margin-bottom: 50px;
 }
-  .myResume-Contact-Info {
- width:90%;
-    font-size:60%;
-    text-align:center;
-    margin-left:-15px;
-  }
-  .myResume-Profile-Pic{
-  width:90%;
-  margin:auto 0%;    
+
+ul.main{
+  display:flex;
+  flex-flow: row wrap;
+  padding:0px;
+  margin-bottom: 0px;
+  list-style: none;
 }
-.myResume-Profile-Pic img{
-  width:80%;
+ul.main li{
+  width: 40%;
 }
-  
-h1.title{
-  font-size: 20px;
-  background-color:#CCC;
-  padding:5px 0px 5px 0px;
-  border-radius:0px 0px 0px 0px;
-  width:146%;
-  margin-bottom:10px;
-  position:relative;
-  left:-41px;
-  text-align:center;  
+
+ul.main li:nth-child(odd){
+  margin-right: 5%;
 }
-.myResume-Profile-Intro{
-  width:90%;
-  text-align:justify;
-  margin-top:50px;
-  font-size: 18px;
-  margin-left:-25px;  
+
+ul.main li p{
+  margin-top: 0px;
 }
-.myResume-Skills{
-  width:90%;
-  font-size: 15px; 
-  margin-left:-25px;   
+
+.main a{
+  text-decoration: none;
+  margin: auto;
+  width:50%;
+  border: 2px solid RGB(166, 170, 169);
+  text-align:center;
+  padding:0px;
+  color: inherit;
+  margin-bottom:50px;
 }
-.myResume-Education{ 
-  width:90%;
+.main a:hover{
+  background-color: #212121;
+  color: #e2e2e2;
+  border-color: #F0F0F0;
+}
+
+.main a h3 {
+  margin:0px;
+  padding:20px;
+}
+
+footer{
+  padding: 10px 0;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color:  RGB(59, 166, 216);
+}
+
+a.icon { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:40px;
+  height:40px;
+  font-size: 25px;
+  margin: 0 5px;
+  color: #f0f0f0;
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in; 
+}
+
+a.icon:hover{
+  color: rgb(59, 166, 216);
+  background-color:  #f0f0f0;
+  transition: color 0.1s ease-in;
+}
+
+
+
+table {
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+}
+thead {
+  background: SteelBlue;
+  color: white;
+}
+th,
+td {
   font-size: 15px;
-  margin-left:-25px;   
-}  
+  padding: 5px 10px;
 }
 
-</style></head><body>
-<html><head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 </head>
-<body>
-<div class="myResume">
-<div class="myResume-Contact-Info">
-<h1>Akshay Shenoy</h1>
-<h6>"Ashwini Nivas" K.G Road Hirgana Post Murur Karkala Tq,Udupi Dist-576117</h6>
-<h6><a href="/cdn-cgi/l/email" class="__cf_email__" data-cfemail="20414b534841595348454e4f59181860474d41494c0e434f4d"></a></h6>
-  <h6>akshayshenoy88@gmail.com </h6>
-<h6>akshayshenoy.github.io </h6>
-<h6>8748945737</h6>
+<body translate="no">
+<div class="container">
+<div class="left-col">
+<div class="photo"><img src="https://3.bp.blogspot.com/-4jOumFIZFoA/XVWAxNKXnGI/AAAAAAAABkY/jbs4kPEJaeYA17wUe-_g3uTvsH8z7AEsACK4BGAYYCw/s84/imgonline-com-ua-CompressToSize-MTiy1YyuJaCcly%2B%25281%2529.jpg" alt="photo" /></div>
+<div class="name">
+<h1 align="center"> Akshay Shenoy </h1>
 </div>
-<div class="myResume-Profile-Pic">
-<img src="https://2.bp.blogspot.com/-8SByoOnWWaY/XVOuHSO3lNI/AAAAAAAABiY/k5mnbo2iyCwFJB0zDIJCZyALohhIZ8dTACK4BGAYYCw/s84/imgonline-com-ua-CompressToSize-MTiy1YyuJaCcly.jpg" alt="Akshay Shenoy- resume photo " />
-</div>
-<div class="clear"></div>
-<div class="myResume-Profile-Intro">
-<h1 class="title">PERSONAL PROFILE</h1>
-<p><li>Currently pursuing B.E in Information science & technology at AIET, Mijar.</li>
-<li>Interested to work on technical problem solving and skills development.</li>
-<li>Project oriented and skilled at handling diverse responsibilities.</li>
-<li>Proven self-motivated, with the ability to learn quickly and work within a team and High.</li>
-<br>
-<h1 class="title">OBJECTIVES</h1>
-<p>► To work in a highly competitive environment with a perfect challenge by contributing the best for the growth of the organization while ensuring growth in personal career.<br>
-► To Be a Successful professional in a Globally Respected Company and to achieve the objectives of the company with Honesty and Fairness and to Continuously Upgrade My Knowledge and Skills.<br>
-► Seeking a position to utilize my skills and abilities in the Information Technology that offers professional growth while being resourceful, innovative and flexible.<br>
-</p>
-</div>
-<div class="myResume-Skills">
-<h1 class="title">SKILLS</h1>
-<ul class="myResume-Skills-left">
-<li>Development</li>
-<li>C</li>
-<li>C++</li>
-<li>Java</li>
-<li>HTML</li>
-<li>SQL Databases</li>
-<li>Python</li>
-</ul>
-<ul class="myResume-Skills-right">
-<li>Softwares</li>
-<li>Eclips</li>
-<li>Netbeans</li>
-<li>Codeblocks</li>
-<li>MS Office </li>
-<li>Anaconda</li>
-<li>Atoms</li>
-<li>Sublime Text</li>
-</ul>
-<ul class="myResume-Skills-left">
-<li>Platform</li>
-<li>Windows XP/7/10</li>
-<li>Ubuntu</li>
-<li>Linux</li>
-<li>Kali Linux</li>
+<div class="personalInfo">
+<h2>personal info</h2>
+<ul class="info">
+<li><i class="fa fa-home "></i>
+<p>"Ashwini Nivas" K.G Road Hirgana Post, Murur, Karkala Tq, Udupi Dist Pin-576117</p>
+</li>
+<li><i class="fa fa-phone"></i>
+<p>+91 874 894 5737</p>
+</li>
+<li><i class="fa fa-envelope"></i>
+<p>akshayshenoy88@gmail.com</p>
+</li>
 </ul>
 </div>
-<div class="clear"></div>
-<div class="myResume-Education">
-<h1 class="title">EDUCATION</h1>
+<div class="language">
+<h2>Language</h2>
 <ul>
-<li>Srimad Bhuvanendra High School Karkala --- 2013 Percentage --74.08.</li>
-<li>Sri Bhuvanendra College Karkala --- 2015 Percentage --65.33.</li>
-<li>Alva's Institute of Engineering and Tecnology --- B.E 2020 CGPA --5.6</li><br>
+<li><i class="fa fa-language"></i>
+<p>English</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Kannada</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Konkani</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Tulu</p>
+</li>
+<li><i class="fa fa-language"></i>
+<p>Sanskrith</p>
+</li>
 </ul>
-<h1 class="title">INTERNSHIP</h1>
+</div>
+<div class="hobbies">
+<h2>Hobbies / Intrests</h2>
 <ul>
-<p>► Embedded Developer at Oscki Labs,Bangalore 2017</p>
-<li>Detailed study Arduino Uno and Embedded C</li>
-<li>Conducted a project on LED Interfacing using Arduino Uno</li><br>
-</ul>
-<h1 class="title">CERTIFIED COURSEs/PAPER PUBLICATIONS</h1>
-<ul>
-<li>Completed course on “JAVA Programming” by Sara IT Solution Pvt Ltd.</li>
-<li>Completed course on “Cloud Computing with Amazon Web Services development” by Udemy.
-<li>Completed course on “Python Core and Advanced” by Udemy.</li>
-<li>Published Paper entitled “An Efficient Approach for Blue Brain Technology to Advanced
-Researching” Certified by International Journal for Research Trends and Innovation (IJRTI).</li><br>
-</ul>
-<h1 class="title">PROJECTS</h1>
-<ul>
-<p>LED Interfacing project using Arduino Uno in Embedded C: 2017</p>
-<li> Built a system that that a provide a Light Interfacing with the Help of
-Arduino Uno and Embedded C.</li>
-<p>Library Management System: 2018</p>
-<li> Built a system that integrates all the information regarding Book’s details
-that Available or Not in the Library.</li>
-<p>Restaurant Table Reservation System: 2019</p>
-<li> Built a system that provide the all the information regarding Restaurant
-details like Table, Food, and Category.</li><br>
-</ul>
-<h1 class="title">EXTRA CURRICULARS/INTEREST</h1>
-<ul>
-<li>Sports, Trekking, Travelling and many other outdoor activities are of my interest.</li>
-<li>Successfully conducted a Technical branch event called TechCrunch.</li>
-<li> Volunteered in the college Filmfest’19 conducted by ISE Branch.</li><br>
+<li><i class="fa fa-film"></i>
+<p>Movies</p>
+</li>
+<li><i class="fa fa-bicycle"></i>
+<p>Sports</p>
+</li>
+<li><i class="fa fa-car"></i>
+<p>Traveling</p>
+</li>
+<li><i class="fa fa-music"></i>
+<p>Music</p>
+</li>
 </ul>
 </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<div class="right-col">
+<div class="CAREEROBJECTIVE:">
+<div class="header">
+<i class="fa fa-snowflake-o fa-2x"></i>
+<h2>CAREER OBJECTIVE</h2>
+</div>
+Seeking a full-time career with an organization, which will permit me to use and
+contribute my abilities and also to enhance my knowledge and contribute
+towards its growth by committed and hardworking quality.
+</div>
+<div class="education">
+<div class="header">
+<i class="fa fa-graduation-cap fa-3x"></i>
+<h2>Education</h2>
+</div>
+<table>
+<thead>
+<tr>
+<th>Qualification</th>
+<th>College </th>
+<th>Board / University</th>
+<th>Aggregate % or CGPA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSLC / 10TH</td>
+<td>Srimad Bhuvanendra College Karkala</td>
+<td>Karnataka State Board -2013 </td>
+<td>74.08%</td>
+</tr>
+<tr>
+<td>PUC / 12TH</td>
+<td>Sri Bhuvanendra College Karkala</td>
+<td>Karnataka State Board -2015 </td>
+<td>65.33%</td>
+</tr>
+<tr>
+<td>B.E.</td>
+<td>Alva's Institute Of Engineering & Technology</td>
+<td>Vishweshwaraya Tecnological Univarsity Belgum -2020</td>
+<td>5.6 CGPA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="workExperiences">
+<div class="header">
+<i class="fa fa-file-text fa-2x"></i>
+<h2>CERTIFICATION COURSES / PAPER PUBLICATIONS</h2>
+</div>
+<p>1. Completed certification course on JAVA by Saara IT Solution Pvt Ltd</p>
+<p>2. Completed course on “Cloud Computing with Amazon Web Services development” by Udemy. </p>
+<p>3. Completed course on “Python Core and Advanced” by Udemy</p>
+<p>4. Published Paper entitled “An Efficient Approach for Blue Brain Technology to Advanced Researching” Certified by International Journal for Research Trends and Innovation (IJRTI).
+</div>
+<div class="INTERNSHIPS">
+<div class="header">
+<i class="fa fa-folder-open fa-3x"></i>
+<h2>INTERNSHIPS / MINI-PROJECTS </h2>
+</div>
+<p>1. Internship on “Arduino Uno using Embedded C” Conducted by Oscki Labs, Bangalore</p>
+<p>2. Mini-Project on Library Management Database System using DBMS</p>
+<p>3. Mini project on Resturant Seat Reservation System usinf File Structure</p>
+<p>4. Mini project on School Management System using Python Application Programming</p>
+</div>
+<div class="skills">
+<div class="header">
+<i class="fa fa-code fa-3x"></i>
+<h2>Skills</h2>
+</div>
+<h4>Programming Language</h4>
+<table style="width:100%" align="left">
+<tr>
+<td>C</td>
+<td>Java</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>Python</td>
+<td>SQL</td>
+</tr>
+</table>
+<h4>Professional Tools used</h4>
+<table style="width:113%" align="left">
+<tr>
+<td> Eclipse</td>
+<td> Git</td>
+<td>Atoms</td>
+<td>Codeblocks</td>
+</tr>
+<tr>
+<td>Netbeans</td>
+<td>MS Office</td>
+<td>Anaconda</td>
+</tr>
+</table>
+</div>
+<footer center>
+<h4>Akshay Shenoy © 2019.</h4>
+<a class="icon" target="_blank" href="https://www.linkedin.com/in/akshay-shenoy-ab734112b/">
+<i class="fa fa-linkedin"></i></a>
+<a class="icon" target="_blank" href="https://github.com/akshayshenoy">
+<i class="fa fa-github"></i></a>
+</footer>
+</body>
 </html>
-</body></html>
-
-
-
 
